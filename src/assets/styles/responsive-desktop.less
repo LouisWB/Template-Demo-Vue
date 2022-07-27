@@ -1,0 +1,36 @@
+::selection {
+  background-color: var(--theme-color);
+  color: var(--background-color);
+}
+
+::-webkit-scrollbar {
+  width: .3125vw;
+  height: .3125vw;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: .1563vw;
+  background-color: var(--theme-color);
+}
+
+#app {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+input,
+select {
+  border: .1042vw solid var(--theme-color);
+  font-size: .9375vw;
+  padding: 1.1458vw 1.5104vw;
+}
+
+input,
+select {
+  border-radius: 3.3854vw;
+}
+
+// 整体两侧间距
+.container {
+  padding: 0 var(--desktop-global-space);
+}

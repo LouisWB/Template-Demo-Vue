@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('@/assets/fonts/Roboto-Regular.ttf');
+}
+
+body {
+  font-family: 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--background-color);
+  overscroll-behavior-y: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--light-text-color);
+  text-decoration: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  display: block;
+}
+
+button {
+  background: none;
+  color: var(--light-text-color);
+  padding: 0;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  background: none;
+  color: var(--theme-color);
+  outline: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--theme-color);
+  }
+}
+
+select {
+  appearance: none;
+  outline: none;
+  background: none;
+  color: var(--theme-color);
+
+  option {
+    appearance: none;
+    outline: none;
+    background: none;
+    border: none;
+  }
+}
+
+#app {
+  color: var(--light-text-color);
+}
+
+// 自定义通用类
+.pointer {
+  cursor: pointer;
+}
+
+.fadein {
+  opacity: 0;
+
+  &.vertical {
+    transform: translate(0, 25%);
+  }
+
+  &.horizontal {
+    transform: translate(25%, 0);
+  }
+
+  &.show {
+    transition: transform var(--transition-duration), opacity var(--transition-duration);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+// 自定义通用类 scroll
